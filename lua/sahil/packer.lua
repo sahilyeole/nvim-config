@@ -1,15 +1,10 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 	
 	 use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	  
   }
@@ -74,7 +69,7 @@ use {
       open = "<M-CR>"
     },
     layout = {
-      position = "bottom", -- | top | left | right
+      position = "bottom", 
       ratio = 0.4
     },
   },
@@ -102,7 +97,7 @@ use {
     cvs = false,
     ["."] = false,
   },
-  copilot_node_command = 'node', -- Node.js version must be > 16.x
+  copilot_node_command = 'node', 
   server_opts_overrides = {},
     })
   end,
@@ -117,16 +112,13 @@ use {
 }
 use { 'mrshmllow/document-color.nvim', config = function()
   require("document-color").setup {
-    -- Default options
-    mode = "background", -- "background" | "foreground" | "single"
+    mode = "background", 
   }
   end
 }
 use({
 	"L3MON4D3/LuaSnip",
-	-- follow latest release.
 	tag = "v<CurrentMajor>.*",
-	-- install jsregexp (optional!:).
 	run = "make install_jsregexp"
 })
 use {'windwp/nvim-ts-autotag'}
@@ -141,7 +133,6 @@ use {
       'stevearc/aerial.nvim',
       config = function() require('aerial').setup({
           on_attach = function(bufnr)
-    -- Jump forwards/backwards with '{' and '}'
     vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>', {buffer = bufnr})
     vim.keymap.set('n', '}', '<cmd>AerialNext<CR>', {buffer = bufnr})
   end
@@ -153,9 +144,8 @@ use {
   tag = "*",
   requires = {
     "SmiteshP/nvim-navic",
-    "nvim-tree/nvim-web-devicons", -- optional dependency
-  },
-  after = "nvim-web-devicons", -- keep this if you're using NvChad
+    "nvim-tree/nvim-web-devicons",   },
+  after = "nvim-web-devicons", 
   config = function()
     require("barbecue").setup()
   end,

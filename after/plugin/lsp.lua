@@ -7,7 +7,7 @@ lsp.ensure_installed({
   'eslint'
 })
 
--- Fix Undefined global 'vim'
+
 lsp.configure('lua-language-server', {
     settings = {
         Lua = {

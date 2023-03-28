@@ -164,11 +164,5 @@ use {
 use 'wakatime/vim-wakatime'
 
 use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-use {'APZelos/blamer.nvim', config = function() require('blamer').setup(
-    {
-        blamer_enabled = 1,
-        blamer_show_in_visual_modes = 0,
-        blamer_show_in_insert_modes = 0
-    }
-    ) end}
+use {'APZelos/blamer.nvim'}
   end)

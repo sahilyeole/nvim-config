@@ -155,4 +155,15 @@ use 'wakatime/vim-wakatime'
 
 use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 use {'APZelos/blamer.nvim'}
+use 'princejoogie/tailwind-highlight.nvim'
+use({
+  "roobert/tailwindcss-colorizer-cmp.nvim",
+  config = function()
+    require("tailwindcss-colorizer-cmp").setup({
+      color_square_width = 2,
+    })
+  end
+})
+use('MunifTanjim/prettier.nvim')
+
   end)
